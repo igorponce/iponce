@@ -1,0 +1,158 @@
+# Hugo configuration file
+# Dev mode: hugo server --renderSegments recent
+# Only renders 2025+ content for fast preview (~70 posts instead of ~750)
+segments:
+  recent:
+    includes:
+    - kind: '{home,section,taxonomy,term}'
+    - path: '{/2026/**,/2027/**,/about,/projects}'
+
+title: Igor Ponce
+enableEmoji: true
+locale: "pt-BR"
+defaultContentLanguage: "pt-br"
+baseURL: "https://iponce.com/"
+enableRobotsTXT: true
+
+languages:
+  pt-br:
+    label: "Português"
+    locale: "pt-BR"
+    weight: 1
+    params:
+      description: "Igor Ponce: experiências e ideias sobre aviação, carreira, tecnologia, empreendedorismo e os projetos que desenvolvo."
+    menu:
+      main:
+        - name: Tema
+          weight: 0
+          params:
+            type: theme-toggle
+        - name: Sobre
+          pageRef: /about
+          weight: 1
+        - name: Projetos
+          pageRef: /projects
+          weight: 2
+        - name: GitHub ↗
+          url: "https://github.com/igorponce"
+          weight: 3
+          params:
+            icon: github
+        - name: X ↗
+          url: "https://x.com/ig_ponce"
+          weight: 4
+          params:
+            icon: x-twitter
+        - name: Buscar
+          weight: 5
+          params:
+            type: search
+        - name: RSS
+          weight: 6
+          url: "/index.xml"
+          params:
+            icon: rss
+        - name: Idioma
+          weight: 7
+          params:
+            type: language-switch
+  en:
+    label: "English"
+    locale: "en"
+    weight: 2
+    title: "Igor Ponce"
+    contentDir: "content"
+    params:
+      description: "Igor Ponce writes about aviation, career, technology, entrepreneurship, and the projects he builds."
+    menu:
+      main:
+        - name: Theme
+          weight: 0
+          params:
+            type: theme-toggle
+        - name: About
+          pageRef: /en/about
+          weight: 1
+        - name: Projects
+          pageRef: /en/projects
+          weight: 2
+        - name: GitHub ↗
+          url: "https://github.com/igorponce"
+          weight: 3
+          params:
+            icon: github
+        - name: X ↗
+          url: "https://x.com/ig_ponce"
+          weight: 4
+          params:
+            icon: x-twitter
+        - name: Search
+          weight: 5
+          params:
+            type: search
+        - name: RSS
+          weight: 6
+          url: "/en/index.xml"
+          params:
+            icon: rss
+        - name: Language
+          weight: 7
+          params:
+            type: language-switch
+
+outputs:
+  home: [HTML, RSS, SearchIndex]
+
+outputFormats:
+  SearchIndex:
+    mediaType: application/json
+    baseName: search-index
+    isPlainText: true
+    notAlternative: true
+
+# import hextra as module
+module:
+  imports:
+    - path: github.com/imfing/hextra
+
+markup:
+  # allow raw html
+  goldmark:
+    renderer:
+      unsafe: true
+
+  # enable hextra syntax highlight
+  highlight:
+    noClasses: false
+
+params:
+  # Keep Hextra's large FlexSearch bundle disabled. The custom local search
+  # loads a compact title index only when a visitor starts searching.
+  search:
+    enable: false
+
+  navbar:
+    displayTitle: true
+    displayLogo: false
+
+  footer:
+    displayCopyright: true
+    displayPoweredBy: false
+
+  editURL:
+    enable: false
+    base: "https://github.com/igorponce/iponce.github.io/edit/master/content"
+
+  # Keep default youtube shortcode as configurable
+  youtubeDefaults:
+    iframeAllowList: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy: "no-referrer"
+    iframeStyle: "border:0; width:100%; aspect-ratio:16/9;"
+
+  theme:
+    default: light
+
+  author:
+    name: Igor Ponce
+
+  description: "Igor Ponce: experiências e ideias sobre aviação, carreira, tecnologia, empreendedorismo e os projetos que desenvolvo."

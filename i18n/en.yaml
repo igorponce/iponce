@@ -1,0 +1,9 @@
+copyright: "© 2026-2026 Igor Ponce - All Rights Reserved"
+pageNotFound: "This page could not be found."
+backToHome: "Back to home"
+listView: "List"
+gridView: "Grid"
+postView: "Post view"
+postCount:
+  one: "{{ .Count }} post"
+  other: "{{ .Count }} posts"

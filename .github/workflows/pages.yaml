@@ -1,0 +1,55 @@
+name: Build and deploy to GitHub Pages
+
+on:
+  push:
+    branches: ["master"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.161.1
+      HUGO_ENVIRONMENT: production
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Validate tags and generate indexes
+        run: |
+          ruby scripts/tag_catalog.rb --check
+          ruby scripts/generate_index.rb
+
+      - name: Install Hugo Extended
+        run: |
+          wget --output-document="${RUNNER_TEMP}/hugo.deb" \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i "${RUNNER_TEMP}/hugo.deb"
+
+      - name: Build clean production site
+        run: hugo --minify --cleanDestinationDir --baseURL "https://iponce.com/"
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,23 @@
+services:
+  iponce-blog:
+    build: .
+    ports:
+      - "1313:1313"
+    volumes:
+      - ./content:/app/content
+      - ./data:/app/data
+      - ./layouts:/app/layouts
+      - ./assets:/app/assets
+      - ./static:/app/static
+      - ./scripts:/app/scripts
+      - ./hugo.yaml:/app/hugo.yaml
+      - ./i18n:/app/i18n
+    environment:
+      - HUGO_ENV=development
+    command: >
+      sh -c "
+        ruby scripts/generate_index.rb &&
+        cd /app &&
+        hugo server --renderSegments recent --renderToMemory -p 1313 --bind 0.0.0.0 --watch
+      "
+    restart: unless-stopped

@@ -1,0 +1,86 @@
+tags:
+  aviation:
+    pt: aviacao
+    en: aviation
+    description: Aviation in general when no narrower aviation topic dominates.
+  pilot_training:
+    pt: formacao-de-pilotos
+    en: pilot-training
+    description: Ab-initio flight training, licenses, ratings, and flight schools.
+  airline_career:
+    pt: carreira-de-piloto
+    en: airline-career
+    description: Airline pilot career paths, hiring, seniority, and professional growth.
+  type_rating:
+    pt: type-rating
+    en: type-rating
+    description: Aircraft type rating courses, simulator training, and conversions.
+  airline_operations:
+    pt: operacoes-aereas
+    en: airline-operations
+    description: Day-to-day airline flight operations, procedures, and dispatch.
+  flight_safety:
+    pt: seguranca-de-voo
+    en: flight-safety
+    description: Operational safety, incidents, accident analysis, and risk management in flight.
+  crew_resource_management:
+    pt: gerenciamento-de-recursos-de-cabine
+    en: crew-resource-management
+    description: CRM, cockpit communication, decision-making, and crew coordination.
+  aircraft_systems:
+    pt: sistemas-de-aeronaves
+    en: aircraft-systems
+    description: Aircraft systems, avionics, and how commercial jets work.
+  airbus:
+    pt: airbus
+    en: airbus
+    description: Airbus aircraft family, fly-by-wire philosophy, and models.
+  boeing:
+    pt: boeing
+    en: boeing
+    description: Boeing aircraft family and models.
+  air_traffic_control:
+    pt: controle-de-trafego-aereo
+    en: air-traffic-control
+    description: ATC procedures, airspace, communications, and coordination with pilots.
+  aviation_regulation:
+    pt: regulacao-aeronautica
+    en: aviation-regulation
+    description: Aviation authorities, regulation, certification, and compliance.
+  aviation_simulator:
+    pt: simuladores-de-voo
+    en: flight-simulators
+    description: Full-flight simulators, training devices, and flight simulation software.
+  aviation_history:
+    pt: historia-da-aviacao
+    en: aviation-history
+    description: Historical aircraft, airlines, aviators, and milestones in aviation.
+  airports:
+    pt: aeroportos
+    en: airports
+    description: Airport infrastructure, operations, and ground handling.
+  military_aviation:
+    pt: aviacao-militar
+    en: military-aviation
+    description: Military aircraft, air forces, and military flight operations.
+  general_aviation:
+    pt: aviacao-geral
+    en: general-aviation
+    description: Private, recreational, and light aircraft flying outside airline operations.
+  saga_virtual:
+    pt: saga-virtual
+    en: saga-virtual
+    description: The recurring Saga Virtual company, its products, and evolution.
+    kind: project
+    aliases: [saga-virtual, "saga virtual"]
+    auto_match: [title, description]
+  motivation:
+    pt: motivacao
+    en: motivation
+    description: Motivation, inspiration, and personal drive.
+    aliases: [motivation]
+  tech:
+    pt: tecnologia
+    en: tech
+    description: Technology in general when no narrower engineering topic dominates.
+    aliases: [tech]
