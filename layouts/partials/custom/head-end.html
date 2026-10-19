@@ -580,14 +580,14 @@
   }
 
   /* Prose + index links: warm ink with a refined, quieter underline. */
-  .content a:not(.lang-toggle-link):not(.iponce-post-card__title-link):not(.iponce-tag-link):not(.iponce-theme-card) {
+  .content a:not(.lang-toggle-link):not(.iponce-post-card__title-link):not(.iponce-tag-link):not(.iponce-theme-card):not(.iponce-index-list__main-link):not(.iponce-project-card__link) {
     color: var(--iponce-accent);
     text-decoration-color: color-mix(in srgb, var(--iponce-accent) 32%, transparent);
     text-underline-offset: 0.15em;
     text-decoration-thickness: 0.06em;
     transition: color 0.15s ease, text-decoration-color 0.15s ease;
   }
-  .content a:not(.lang-toggle-link):not(.iponce-post-card__title-link):not(.iponce-tag-link):not(.iponce-theme-card):hover {
+  .content a:not(.lang-toggle-link):not(.iponce-post-card__title-link):not(.iponce-tag-link):not(.iponce-theme-card):not(.iponce-index-list__main-link):not(.iponce-project-card__link):hover {
     color: var(--iponce-accent-strong);
     text-decoration-color: currentColor;
   }
@@ -954,3 +954,5 @@
   /* Ordered lists keep their numerals, just warmed. */
   .content ol > li::marker { color: var(--iponce-accent); font-weight: 600; }
 </style>
+{{- $editorialStyles := resources.Get "css/editorial.css" | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ $editorialStyles.RelPermalink }}" integrity="{{ $editorialStyles.Data.Integrity }}" />

@@ -35,6 +35,8 @@ O workflow `.github/workflows/pages.yaml` valida tags, regenera índices e publi
 
 As páginas `/projects/` e `/en/projects/` usam `data/projects.yml` através de `layouts/shortcodes/projects.html`. Adicione cada projeto uma única vez ao YAML, com descrições em `pt-br` e `en`; só inclua URL oficial quando confirmada. Não invente produtos, resultados ou links.
 
+A vitrine usa ícones locais em `assets/images/projects/`, indicados pelo campo `image`, e `platform: web` ou `ios`. Mantenha descrições curtas, exibidas em no máximo uma linha, e preserve os textos completos para acessibilidade.
+
 ## Idioma e SEO
 
 O idioma inicial é escolhido no navegador: `pt-*` abre português e qualquer outro idioma abre inglês. A seleção manual é persistida em cookie próprio; não use geolocalização nem redirecione páginas internas. Mantenha canonical, `hreflang`, sitemap, robots, RSS, metadados sociais e Schema.org funcionais. Páginas traduzidas devem ter descrições localizadas.
@@ -42,6 +44,8 @@ O idioma inicial é escolhido no navegador: `pt-*` abre português e qualquer ou
 ## Alterações técnicas
 
 - Use as versões/dependências já configuradas; não instale dependências sem necessidade.
+- Mantenha o visual em `assets/css/editorial.css` e os textos da interface em `i18n/`; preserve os modos claro/escuro e o layout responsivo nos dois idiomas.
 - Preserve o build estático e a publicação via GitHub Actions.
 - Evite incorporar serviços externos. O shortcode YouTube é opcional e só deve ser usado quando solicitado pelo conteúdo.
+- O Disqus usa a conta própria `iponce`, via template nativo do Hugo, apenas nos artigos com data. Respeite `comments: false`, `privacy.disqus.disable` e os identificadores existentes das conversas; não reutilize a conta do blog de origem.
 - Atualize esta documentação e `README.md` quando mudar o fluxo de publicação ou manutenção.

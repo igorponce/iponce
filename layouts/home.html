@@ -1,13 +1,31 @@
 {{ define "main" }}
-  <div class='hx:mx-auto hx:flex hextra-max-page-width'>
-    {{ partial "sidebar.html" (dict "context" . "disableSidebar" true "displayPlaceholder" true) }}
-    {{ partial "toc.html" . }}
+  <div class="iponce-home-shell hx:mx-auto hx:flex hextra-max-page-width">
+    {{ partial "sidebar.html" (dict "context" . "disableSidebar" true) }}
     <article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
-      <main class="hx:w-full hx:min-w-0 hx:max-w-6xl hx:px-6 hx:pt-4 hx:md:px-12">
+      <main class="iponce-home hx:w-full hx:min-w-0 hx:max-w-6xl hx:px-6 hx:pt-4 hx:md:px-12">
         {{ if .Title }}<h1 class="hx:sr-only">{{ .Title }}</h1>{{ end }}
-        <div class="content">
-          {{ .Content }}
-        </div>
+        {{ with hugo.Data.book }}
+          {{- $cover := resources.Get .cover -}}
+          {{- $thumbnail := $cover.Resize "160x webp" -}}
+          <aside class="iponce-book-banner" aria-labelledby="book-title">
+            <img class="iponce-book-banner__cover" src="{{ $thumbnail.RelPermalink }}" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" alt="{{ i18n "bookCoverAlt" (dict "Title" .title) }}" decoding="async">
+            <div class="iponce-book-banner__copy">
+              <p class="iponce-eyebrow">{{ i18n "bookEyebrow" }}</p>
+              <h2 id="book-title" lang="pt-BR">{{ .title }}</h2>
+              <p class="iponce-book-banner__description">{{ index .description $.Site.Language.Lang }}</p>
+            </div>
+            <a class="iponce-book-banner__link" href="{{ .url }}" rel="external">{{ i18n "bookReadMore" }} <span aria-hidden="true">↗</span></a>
+          </aside>
+        {{ end }}
+        <section id="articles" class="iponce-archive" aria-labelledby="articles-title">
+          <div class="iponce-archive__heading">
+            <p class="iponce-eyebrow">{{ i18n "homeArchiveEyebrow" }}</p>
+            <h2 id="articles-title">{{ i18n "homeArticles" }}</h2>
+          </div>
+          <div class="content">
+            {{ .Content }}
+          </div>
+        </section>
       </main>
     </article>
   </div>

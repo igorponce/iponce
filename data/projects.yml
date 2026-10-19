@@ -1,5 +1,57 @@
 projects:
-  - name: Saga Virtual
+  - name: SAGA
+    url: "https://saga.aero"
+    image: "images/projects/saga.png"
+    platform: web
     description:
-      pt-br: "Empresa fundada por Igor Ponce que desenvolve soluções tecnológicas para aviação, educação e gestão."
-      en: "A company founded by Igor Ponce that develops technology solutions for aviation, education, and management."
+      pt-br: "Gestão para escolas de aviação."
+      en: "Management for flight schools."
+  - name: iPilot
+    url: "https://ipilot.com.br"
+    image: "images/projects/ipilot.png"
+    platform: web
+    description:
+      pt-br: "Estudo e simulados para pilotos."
+      en: "Study tools and practice exams."
+  - name: FALA
+    url: "https://falaatc.com"
+    image: "images/projects/fala.png"
+    platform: web
+    description:
+      pt-br: "Treine sua fraseologia aeronáutica."
+      en: "Practice aviation phraseology."
+  - name: A320 Lights and Switches
+    url: "https://apps.apple.com/sa/app/a320-lights-and-switches/id6499496344"
+    image: "images/projects/a320.jpg"
+    platform: ios
+    description:
+      pt-br: "Explore os painéis do Airbus A320."
+      en: "Explore the Airbus A320 cockpit."
+  - name: B737 Lights and Switches
+    url: "https://apps.apple.com/sa/app/b737-lights-and-switches/id6737167586"
+    image: "images/projects/b737.jpg"
+    platform: ios
+    description:
+      pt-br: "Explore o painel superior do Boeing 737."
+      en: "Explore the Boeing 737 overhead panel."
+  - name: EasyShare
+    url: "https://easyshare.com.br"
+    image: "images/projects/easyshare.png"
+    platform: web
+    description:
+      pt-br: "Gestão de aeronaves compartilhadas."
+      en: "Manage shared aircraft."
+  - name: EasyHangar
+    url: "https://easyhangar.com"
+    image: "images/projects/easyhangar.png"
+    platform: web
+    description:
+      pt-br: "Gestão para operações de hangares."
+      en: "Manage your hangar operations."
+  - name: Pilot Interview
+    url: "https://apps.apple.com/sa/app/pilot-interview/id6503417121"
+    image: "images/projects/pilot-interview.jpg"
+    platform: ios
+    description:
+      pt-br: "Prepare-se para entrevistas de piloto."
+      en: "Prepare for pilot interviews."

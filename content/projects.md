@@ -5,6 +5,4 @@ type: projects
 translationKey: projects
 ---
 
-Este é o espaço para conhecer as empresas, aplicativos e iniciativas que desenvolvo. Vou acrescentando novos projetos conforme eles estiverem prontos para serem apresentados.
-
 {{< projects >}}

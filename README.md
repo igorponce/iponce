@@ -1,6 +1,6 @@
 # Igor Ponce — blog pessoal e projetos
 
-Site estático em Hugo Extended, publicado em <https://iponce.com/>. O conteúdo é mantido em Markdown, com português brasileiro como idioma principal e inglês em `/en/`. Não há banco de dados, CMS hospedado, chave de API ou serviço de comentários.
+Site estático em Hugo Extended, publicado em <https://iponce.com/>. O conteúdo é mantido em Markdown, com português brasileiro como idioma principal e inglês em `/en/`. Não há banco de dados, CMS hospedado ou chave de API. Os artigos usam Disqus para comentários.
 
 ## Começar a escrever
 
@@ -50,6 +50,12 @@ ruby scripts/generate_index.rb
 hugo --minify --cleanDestinationDir
 ```
 
+## Aparência
+
+O visual editorial é definido em `assets/css/editorial.css`, com cores para os modos claro e escuro, fontes do sistema e adaptação para telas pequenas. Esse CSS é processado pelo Hugo, sem dependências ou fontes externas. A página inicial fica em `layouts/home.html`; os textos da seção de artigos estão em `i18n/pt-br.yaml` e `i18n/en.yaml`. Os índices continuam sendo gerados pelo script, sem edição manual.
+
+O banner compacto do livro na página inicial usa `data/book.yml` para título, link e descrição nos dois idiomas. A capa fica em `assets/images/entre-ceus-e-sonhos.jpg` e é otimizada pelo Hugo para WebP; nenhuma imagem é carregada da Amazon durante a visita. Os rótulos do banner ficam nos arquivos de `i18n/`.
+
 ## Idiomas
 
 Português fica em `/`; inglês fica em `/en/`. Na primeira visita à raiz, o site escolhe português se o idioma preferido do navegador começar com `pt` e inglês nos demais casos. A escolha explícita no seletor de idioma é lembrada no navegador. A detecção usa as preferências do navegador, sem geolocalização, cookies de terceiros ou chamadas a APIs externas.
@@ -58,7 +64,9 @@ Para traduzir uma página, crie o arquivo `.en.md` correspondente e mantenha `tr
 
 ## Vitrine de projetos
 
-As páginas [Projetos](/projects/) e [Projects](/en/projects/) usam o catálogo bilíngue em `data/projects.yml`. Para adicionar um projeto, inclua nome, descrição em `pt-br` e `en` e, se existir, o link oficial em `url`. Não adicione endereços ou funcionalidades que ainda não foram confirmados.
+As páginas [Projetos](/projects/) e [Projects](/en/projects/) exibem uma vitrine responsiva a partir do catálogo bilíngue em `data/projects.yml`. Para adicionar um projeto, inclua `name`, descrições curtas em `pt-br` e `en`, `platform` (`web` ou `ios`), uma imagem local em `image` e, se existir, o link oficial em `url`. As descrições ocupam no máximo uma linha, com reticências quando necessário; o texto completo continua disponível para leitores de tela e no tooltip.
+
+Os ícones oficiais ficam em `assets/images/projects/`; o campo `image` usa o caminho relativo a `assets/`. Hugo otimiza as imagens para WebP no build, sem buscar imagens ou dados nos sites dos projetos durante a visita. Não adicione endereços ou funcionalidades que ainda não foram confirmados.
 
 ## Publicação no GitHub Pages
 
@@ -75,7 +83,17 @@ Cada build apaga os arquivos antigos de `public/` antes de gerar o site, evitand
 
 ## SEO e serviços externos
 
-Hugo gera sitemap, robots.txt, RSS, URLs canônicas, metadados Open Graph/Twitter, dados estruturados e `hreflang` nas páginas traduzidas. Escreva uma descrição própria em cada idioma publicado e use imagens com texto alternativo. O site não carrega fontes hospedadas nem comentários de terceiros; vídeos incorporados do YouTube só fazem uma conexão externa quando um artigo opta por usar o shortcode correspondente.
+Hugo gera sitemap, robots.txt, RSS, URLs canônicas, metadados Open Graph/Twitter, dados estruturados e `hreflang` nas páginas traduzidas. Escreva uma descrição própria em cada idioma publicado e use imagens com texto alternativo. O site não carrega fontes hospedadas. Disqus faz conexões externas apenas nas postagens com comentários habilitados; vídeos incorporados do YouTube só fazem uma conexão externa quando um artigo opta por usar o shortcode correspondente.
+
+### Comentários
+
+O Disqus usa o shortname próprio `iponce`, definido em `services.disqus.shortname` no `hugo.yaml`, e o template nativo do Hugo. O widget aparece abaixo dos artigos com data, não na página inicial, em Sobre ou em Projetos. Ele depende de JavaScript e pode carregar cookies e recursos de terceiros.
+
+Para desabilitar comentários em um artigo, adicione `comments: false` ao front matter e mantenha a opção sincronizada nas traduções existentes. Para desabilitar o Disqus no site inteiro, configure `privacy.disqus.disable: true` no `hugo.yaml`.
+
+Não altere identificadores de conversas existentes. O template respeita `disqus_identifier`, `disqus_url` e `disqus_title` quando definidos no front matter; sem esses campos, o Disqus identifica a conversa pela URL da página. Recuperar comentários antigos exige o mesmo shortname e a associação correta com as URLs ou identificadores anteriores.
+
+Em `localhost` e `127.0.0.1`, o template nativo mostra uma mensagem de prévia em vez de carregar o Disqus. O widget completo funciona no domínio publicado, desde que `iponce.com` esteja autorizado nas configurações do Disqus.
 
 ## Agradecimentos e créditos
 
