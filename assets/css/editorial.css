@@ -276,6 +276,14 @@ main {
   color: var(--iponce-accent);
 }
 
+.iponce-index-list__description {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--iponce-muted);
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
 .iponce-post-card,
 .iponce-project-card {
   border: 1px solid var(--iponce-line);

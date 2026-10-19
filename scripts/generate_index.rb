@@ -131,9 +131,10 @@ def render_months(grouped_posts, lang: :pt, show_tags: false)
 
     grouped_posts[[year, month]].each do |post|
       line = %(- <a class="iponce-index-list__main-link" href="#{escape_html(post[:url])}" title="#{escape_html(post[:description])}">#{escape_html(post[:title])}</a>)
+      line += %(<span class="iponce-index-list__description">#{escape_html(post[:description])}</span>)
       if show_tags
         tags = render_tag_links(post[:tags], lang: lang, modifier: 'index-list')
-        line += "<br>#{tags}"
+        line += tags
       end
       lines << line
     end
@@ -155,8 +156,8 @@ def render_post_card(post, lang: :pt)
     <article class="iponce-post-card" title="#{escape_html(post[:description])}">
       <time class="iponce-post-card__date" datetime="#{post[:date].to_date.iso8601}">#{escape_html(date_label)}</time>
       <h3 class="iponce-post-card__title"><a class="iponce-post-card__title-link" href="#{escape_html(post[:url])}">#{escape_html(post[:title])}</a></h3>
-      #{render_tag_links(post[:tags], lang: lang, modifier: 'card')}
       <p class="iponce-post-card__description">#{escape_html(post[:description])}</p>
+      #{render_tag_links(post[:tags], lang: lang, modifier: 'card')}
     </article>
   HTML
 end
