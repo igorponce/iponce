@@ -23,9 +23,9 @@ tags:
     pt: seguranca-de-voo
     en: flight-safety
     description: Operational safety, incidents, accident analysis, and risk management in flight.
-  crew_resource_management:
-    pt: gerenciamento-de-recursos-de-cabine
-    en: crew-resource-management
+  crm:
+    pt: crm
+    en: crm
     description: CRM, cockpit communication, decision-making, and crew coordination.
   aircraft_systems:
     pt: sistemas-de-aeronaves

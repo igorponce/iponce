@@ -173,3 +173,5 @@ mise.toml
 
 # Scratch / local notes (briefs, todo files, translation plans)
 tmp/
+
+personal-cookbook.md
