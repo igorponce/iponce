@@ -8,7 +8,7 @@ tags:
   - pilot-training
   - aviation
   - motivation
-draft: true
+draft: false
 ---
 
 Many people who dream of becoming pilots face a difficult question early in their journey:

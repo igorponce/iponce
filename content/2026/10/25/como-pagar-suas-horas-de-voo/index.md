@@ -7,7 +7,7 @@ tags:
   - formacao-de-pilotos
   - aviacao
   - motivacao
-draft: true
+draft: false
 ---
 
 Muita gente que sonha em ser piloto se depara com uma pergunta difícil logo no começo da jornada:

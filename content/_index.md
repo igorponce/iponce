@@ -13,6 +13,7 @@ title: Igor Ponce
 {{% index-list %}}
 ## 2026 - Outubro
 
+- <a class="iponce-index-list__main-link" href="/2026/10/25/como-pagar-suas-horas-de-voo/" title="Uma experiência pessoal sobre como financiar a formação de piloto aos poucos, evitar dívidas arriscadas e seguir em frente com disciplina.">Como pagar suas horas de voo</a><span class="iponce-index-list__description">Uma experiência pessoal sobre como financiar a formação de piloto aos poucos, evitar dívidas arriscadas e seguir em frente com disciplina.</span><span class="iponce-post-tags iponce-post-tags--index-list"><a class="iponce-tag-link" href="/tags/formacao-de-pilotos/">#formacao-de-pilotos</a><a class="iponce-tag-link" href="/tags/aviacao/">#aviacao</a><a class="iponce-tag-link" href="/tags/motivacao/">#motivacao</a></span>
 - <a class="iponce-index-list__main-link" href="/2026/10/19/como-escolher-seu-aeroclube-escola-para-voar/" title="Cinco critérios para comparar escolas de aviação: localização, condições meteorológicas, disponibilidade de aeronaves, qualidade da instrução e preço.">Como escolher seu aeroclube ou escola de aviação</a><span class="iponce-index-list__description">Cinco critérios para comparar escolas de aviação: localização, condições meteorológicas, disponibilidade de aeronaves, qualidade da instrução e preço.</span><span class="iponce-post-tags iponce-post-tags--index-list"><a class="iponce-tag-link" href="/tags/formacao-de-pilotos/">#formacao-de-pilotos</a><a class="iponce-tag-link" href="/tags/aviacao-geral/">#aviacao-geral</a><a class="iponce-tag-link" href="/tags/aviacao/">#aviacao</a></span>
 
 ## 2026 - Setembro
@@ -29,9 +30,15 @@ title: Igor Ponce
 <section class="iponce-index-month" aria-labelledby="iponce-grid-2026-10">
   <div class="iponce-index-month__header">
     <h2 id="iponce-grid-2026-10">2026 - Outubro</h2>
-    <span>1 post</span>
+    <span>2 posts</span>
   </div>
   <div class="iponce-post-grid">
+<article class="iponce-post-card" title="Uma experiência pessoal sobre como financiar a formação de piloto aos poucos, evitar dívidas arriscadas e seguir em frente com disciplina.">
+  <time class="iponce-post-card__date" datetime="2026-10-25">25/10/2026</time>
+  <h3 class="iponce-post-card__title"><a class="iponce-post-card__title-link" href="/2026/10/25/como-pagar-suas-horas-de-voo/">Como pagar suas horas de voo</a></h3>
+  <p class="iponce-post-card__description">Uma experiência pessoal sobre como financiar a formação de piloto aos poucos, evitar dívidas arriscadas e seguir em frente com disciplina.</p>
+  <span class="iponce-post-tags iponce-post-tags--card"><a class="iponce-tag-link" href="/tags/formacao-de-pilotos/">#formacao-de-pilotos</a><a class="iponce-tag-link" href="/tags/aviacao/">#aviacao</a><a class="iponce-tag-link" href="/tags/motivacao/">#motivacao</a></span>
+</article>
 <article class="iponce-post-card" title="Cinco critérios para comparar escolas de aviação: localização, condições meteorológicas, disponibilidade de aeronaves, qualidade da instrução e preço.">
   <time class="iponce-post-card__date" datetime="2026-10-19">19/10/2026</time>
   <h3 class="iponce-post-card__title"><a class="iponce-post-card__title-link" href="/2026/10/19/como-escolher-seu-aeroclube-escola-para-voar/">Como escolher seu aeroclube ou escola de aviação</a></h3>

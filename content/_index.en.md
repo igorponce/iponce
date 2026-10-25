@@ -13,6 +13,7 @@ title: Igor Ponce
 {{% index-list %}}
 ## 2026 - October
 
+- <a class="iponce-index-list__main-link" href="/en/2026/10/25/how-to-pay-for-flight-training/" title="A personal account of funding flight training step by step, avoiding risky debt, and moving forward with discipline.">How to Pay for Your Flight Training</a><span class="iponce-index-list__description">A personal account of funding flight training step by step, avoiding risky debt, and moving forward with discipline.</span><span class="iponce-post-tags iponce-post-tags--index-list"><a class="iponce-tag-link" href="/en/tags/pilot-training/">#pilot-training</a><a class="iponce-tag-link" href="/en/tags/aviation/">#aviation</a><a class="iponce-tag-link" href="/en/tags/motivation/">#motivation</a></span>
 - <a class="iponce-index-list__main-link" href="/en/2026/10/19/how-to-choose-a-flying-club-or-flight-school/" title="Five criteria for comparing flight schools: location, weather, aircraft availability, quality of instruction, and cost.">How to Choose a Flying Club or Flight School</a><span class="iponce-index-list__description">Five criteria for comparing flight schools: location, weather, aircraft availability, quality of instruction, and cost.</span><span class="iponce-post-tags iponce-post-tags--index-list"><a class="iponce-tag-link" href="/en/tags/pilot-training/">#pilot-training</a><a class="iponce-tag-link" href="/en/tags/general-aviation/">#general-aviation</a><a class="iponce-tag-link" href="/en/tags/aviation/">#aviation</a></span>
 
 ## 2026 - September
@@ -29,9 +30,15 @@ title: Igor Ponce
 <section class="iponce-index-month" aria-labelledby="iponce-grid-2026-10">
   <div class="iponce-index-month__header">
     <h2 id="iponce-grid-2026-10">2026 - October</h2>
-    <span>1 post</span>
+    <span>2 posts</span>
   </div>
   <div class="iponce-post-grid">
+<article class="iponce-post-card" title="A personal account of funding flight training step by step, avoiding risky debt, and moving forward with discipline.">
+  <time class="iponce-post-card__date" datetime="2026-10-25">Oct 25, 2026</time>
+  <h3 class="iponce-post-card__title"><a class="iponce-post-card__title-link" href="/en/2026/10/25/how-to-pay-for-flight-training/">How to Pay for Your Flight Training</a></h3>
+  <p class="iponce-post-card__description">A personal account of funding flight training step by step, avoiding risky debt, and moving forward with discipline.</p>
+  <span class="iponce-post-tags iponce-post-tags--card"><a class="iponce-tag-link" href="/en/tags/pilot-training/">#pilot-training</a><a class="iponce-tag-link" href="/en/tags/aviation/">#aviation</a><a class="iponce-tag-link" href="/en/tags/motivation/">#motivation</a></span>
+</article>
 <article class="iponce-post-card" title="Five criteria for comparing flight schools: location, weather, aircraft availability, quality of instruction, and cost.">
   <time class="iponce-post-card__date" datetime="2026-10-19">Oct 19, 2026</time>
   <h3 class="iponce-post-card__title"><a class="iponce-post-card__title-link" href="/en/2026/10/19/how-to-choose-a-flying-club-or-flight-school/">How to Choose a Flying Club or Flight School</a></h3>
